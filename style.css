@@ -1,5 +1,74 @@
-body {
-    font-size: large;
-    background-image: url(./etoiles.jpg);
-    background-color: red; 
+
+@keyframes a-long-time-ago {
+    from{
+        transform: translateY(900px) rotate3d(1, 0, 0, 50deg);
+    }
+    to {
+        transform: translateY(-400px) rotate3d(1, 0, 0, 50deg);
+    }
 }
+html{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: black;
+    background-image: url(/etoiles.jpg);
+}
+
+body{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.intro{
+    color: yellow;
+    text-align: center;
+}
+
+.starwars{
+    color: yellow;
+    display:flex;
+    justify-content: center;
+    height: 800px;
+    perspective: 400px;
+    text-align: justify;
+    font-size: 500%;
+}
+
+.crawl{
+    position: relative;
+    top: -100px;
+    transform-origin: 50% 100%;
+    animation-name: crawl;
+    animation: crawl 40s linear;
+}
+
+
+
+@keyframes crawl {
+    0% {
+        top: 0;
+        transform: rotateX(20deg) translateZ(0) 
+    }
+    100% {
+        top: -5000px;
+        transform: rotateX(25deg) translateZ(-2500px) 
+    }
+}
+
+.image{
+    size: 500%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+audio {
+    background-color: black;
+}
+ 
+
+
+
+
+
+
